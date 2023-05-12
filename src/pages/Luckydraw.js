@@ -24,12 +24,26 @@ const LuckyDraw=()=>{
           strIngredient3,
           strIngredient4,
           strIngredient5,
+          strMeasure1,
+          strMeasure2,
+          strMeasure3,
+          strMeasure4,
+          strMeasure5
         }=data.drinks[0]
-        const ingredients=[strIngredient1,
+        const nameofIngredients=[strIngredient1,
         strIngredient2,
         strIngredient3,
         strIngredient4,
         strIngredient5,]
+        const measurements=[  strMeasure1,
+          strMeasure2,
+          strMeasure3,
+          strMeasure4,
+          strMeasure5]
+
+          const ingredients=measurements.map((i,index)=>i+nameofIngredients[index])
+
+        
         const newCocktail={name,image,glass,info,category,instruction,ingredients}
         setCocktail(newCocktail)
       }
